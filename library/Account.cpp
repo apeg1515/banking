@@ -5,13 +5,13 @@ using namespace std;
 //create the methods from the header file
 
 //create the singleton
-Account* Account::getInstance()
+Account* Account::Instance()
 {
-  if (instance == 0)
+  if (!m_Instance)
   {
-    instance = new Account();
+    m_Instance = new Account();
   }
-  return instance;
+  return m_Instance;
 }
 
 void Account::CreateAccount()
