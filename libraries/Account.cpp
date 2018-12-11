@@ -1,10 +1,13 @@
 #include <iostream>
+#include <iomanip>
 #include "Account.h"
 
 using namespace std;
 //create the methods from the header file
 
 //create the singleton
+Account* Account::m_Instance = 0;
+
 Account* Account::Instance()
 {
   if (!m_Instance)
